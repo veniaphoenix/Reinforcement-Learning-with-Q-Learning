@@ -111,12 +111,12 @@ accuracy = (reach_goal_counter / eps) *100
 
 print("max reward: {} in ep {},\naction in best episode: {}\nACCURACY = {}%".format(max_reward, ep_max_reward, np.array(action_in_best_episode), accuracy))
 
-#Test action in final episode
-# env.reset()
-# env.state = convert_state(final_eps_state)
-# for action in action_in_best_episode:
-# 	env.step(action)
-# 	env.render()
+#Test action in best episode
+env.reset()
+env.state = convert_state(final_eps_state)
+for action in action_in_best_episode:
+	env.step(action)
+	env.render()
 
 
 
